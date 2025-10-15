@@ -1,0 +1,10 @@
+{
+  "description": "End-to-end runbook for migrating UniFi controller to Azure with zero-downtime DNS cutover.",
+  "topics": [
+    "unifi",
+    "azure",
+    "migration",
+    "nsg"
+  ],
+  "created": "2025-10-15"
+}
