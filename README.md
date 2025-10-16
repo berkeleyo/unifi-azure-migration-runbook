@@ -1,3 +1,7 @@
+﻿![CI](https://github.com/berkeleyo/unifi-azure-migration-runbook/actions/workflows/powershell-ci.yml/badge.svg)
+![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 # unifi-azure-migration-runbook
 
 End-to-end runbook for migrating UniFi controller to Azure with zero-downtime DNS cutover.
@@ -13,3 +17,4 @@ End-to-end runbook for migrating UniFi controller to Azure with zero-downtime DN
 
 Runbook for cutover via DNS with Remote Management enabled.
 All specific domains and IPs are redacted.
+
