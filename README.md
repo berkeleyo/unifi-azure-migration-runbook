@@ -1,20 +1,22 @@
-﻿![CI](https://github.com/berkeleyo/unifi-azure-migration-runbook/actions/workflows/powershell-ci.yml/badge.svg)
-![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+# Unifi → Azure Migration Runbook
+Steps for a safe service migration to Azure with backout.
 
-# unifi-azure-migration-runbook
+## Stages
+1. Discovery & inventory
+2. Landing zone (vnet, subnets, NSGs)
+3. Data sync (blue/green)
+4. DNS + NSG cutover
+5. Verification & backout
 
-End-to-end runbook for migrating UniFi controller to Azure with zero-downtime DNS cutover.
+```mermaid
+sequenceDiagram
+  participant U as Unifi
+  participant A as Azure
+  U->>A: Baseline & sync
+  A->>A: Blue env up
+  U->>A: Cutover DNS/NSG
+  A-->>U: Health OK
+```
 
-## Getting started
-- Clone and explore.
-- Use the CI workflows as examples.
-
-
----
-
-# UniFi Controller Migration (Azure)
-
-Runbook for cutover via DNS with Remote Management enabled.
-All specific domains and IPs are redacted.
-
+## Outcome
+- Clean cutover with defined backout (A/B DNS swap)
